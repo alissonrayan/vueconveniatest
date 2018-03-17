@@ -1,0 +1,14 @@
+//edição de variavel do carousel
+ .VueCarousel{
+    width: 150px;
+
+    @include sm{
+      width: 200px;;
+    }
+    @include md{
+      width: 300px;
+    }
+    @include xl{
+        width: auto
+    }
+   }

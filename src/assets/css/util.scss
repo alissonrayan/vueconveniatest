@@ -1,0 +1,91 @@
+//variaveis e mixins para as media queries
+$screen-sm-min: 576px;
+$screen-md-min: 768px;
+$screen-lg-min: 992px;
+$screen-xl-min: 1200px;
+
+@mixin sm {
+    @media (min-width: #{$screen-sm-min}) {
+        @content;
+    }
+ }
+ 
+ @mixin md {
+    @media (min-width: #{$screen-md-min}) {
+        @content;
+    }
+ }
+ 
+ @mixin lg {
+    @media (min-width: #{$screen-lg-min}) {
+        @content;
+    }
+ }
+ 
+ @mixin xl {
+    @media (min-width: #{$screen-xl-min}) {
+        @content;
+    }
+ }
+
+ 
+// Custom devices
+@mixin rwd($screen) {
+    @media (min-width: $screen+'px') {
+        @content;
+    }
+ }
+
+ //mixins uteis para o codigo
+ @mixin btn{
+    button{
+        margin-left: -4px;
+        padding: 5px 9px;
+        border: none;
+        background-color: #afc637;
+        color: #fff;
+        border-radius: 3px;
+        cursor: pointer;
+
+        &:hover{
+            zoom: 1;
+            filter: alpha(opacity=50);
+            opacity: 0.7;
+            -webkit-transition: opacity .15s ease-in-out;
+            -moz-transition: opacity .15s ease-in-out;
+            -ms-transition: opacity .15s ease-in-out;
+            -o-transition: opacity .15s ease-in-out;
+            transition: opacity .15s ease-in-out;
+        }
+    }
+ }
+
+ @mixin inp{
+    input{
+        border: none;
+        border-radius: 3px;
+        background-color: #f4f4f5;
+        padding: 5px 8px;
+
+        &:focus{
+            outline-color: #b43ef6;
+        }
+    }
+ }
+
+ @mixin arrows{
+    .arrow{
+        width: 20px;
+        height: 20px;
+        &--next{
+          background-image: url('../assets/images/arrow-right.png');
+          background-size: 100%;
+          background-repeat: no-repeat;
+        }
+        &--prev{
+          background-image: url('../assets/images/arrow_LeftLight.png');
+          background-size: 100%;
+          background-repeat: no-repeat;
+        }
+    }
+ }
