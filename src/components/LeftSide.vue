@@ -172,6 +172,7 @@ export default {
 
                 &__text{
                     margin: 5px 0px;
+                    font-size: 14px;
                 }
                 button{
                     border-radius: 12px;
@@ -181,6 +182,10 @@ export default {
                     margin: 5px 0;
                 }
                 span{
+                    color: #b43ef6;
+                }
+                a{
+                    text-decoration: none;
                     color: #b43ef6;
                 }
             }
